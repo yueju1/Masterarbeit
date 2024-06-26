@@ -38,14 +38,21 @@ class MoveToolToFrame(rclpy.node.Node):
         self.req2 = ReadYaml.Request()
         self.br = CvBridge()
         
-        self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
+        
         
         
         self.list = []
         self.r = 0 
         self.R = 0   
         
-        self.send_move_request()
+        # self.send_move_request()
+        m = self.send_move_request()
+        if m.success == True:
+            self.get_logger().info('wwwwwww')
+            self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
+
+        # clients = MoveToolToFrame()
+        
 
     def start_calibration_callback(self,request,response):
         self.get_logger().info('2222222222222222')
@@ -70,6 +77,8 @@ class MoveToolToFrame(rclpy.node.Node):
         print(img.shape)
 
         img2 = img[200:365, 620:800]
+
+        
 
 
         median = cv2.medianBlur(img2,9)
@@ -117,9 +126,7 @@ class MoveToolToFrame(rclpy.node.Node):
         #     cv2.circle(img, (int(point[0]), int(point[1])), 1, (0, 0, 255), -1)
 
 
-        while self.future1.result().success != True:
-            self.get_logger().info("11111111111111111")
-            print(222222222222222222222222222222222222)
+        
 
 
 
@@ -144,9 +151,9 @@ class MoveToolToFrame(rclpy.node.Node):
         
         self.req.target_frame = 'Camera_Station_TCP'
         self.req.execute_movement = True
-        self.req.translation.x = -0.0
+        self.req.translation.x = 0.002
         self.req.translation.y = 0.0
-        self.req.translation.z = -0.01
+        self.req.translation.z = 0.0
         
         
         self.future1 = self.client.call_async(self.req)
@@ -154,7 +161,7 @@ class MoveToolToFrame(rclpy.node.Node):
         self.get_logger().info('Sending the movement request...')
         # if error in movit server ...
         self.notreadytosave = False
-        # rclpy.spin_until_future_complete(self, self.future1)
+        rclpy.spin_until_future_complete(self, self.future1)
         
         # time.sleep(3.0)
 
@@ -238,8 +245,10 @@ def main():
     rclpy.init()
 
     client = MoveToolToFrame()
+    
+
     # response1 = client.send_move_request()
-    # response2 = client.send_read_yaml_request()
+    # # response2 = client.send_read_yaml_request()
 
     # if response1.success == True:
     #     client.get_logger().info('THIS IS %s'%response1.joint_names)
@@ -250,7 +259,6 @@ def main():
     #     client.get_logger().info('The adaptation failed!')
 
     rclpy.spin(client)
-
     rclpy.shutdown()
 
 if __name__ == '__main__':

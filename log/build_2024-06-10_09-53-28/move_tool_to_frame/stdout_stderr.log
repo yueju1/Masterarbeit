@@ -1,0 +1,35 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Removing /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move-tool-to-frame.egg-link (link to .)
+running egg_info
+writing ../../build/move_tool_to_frame/move_tool_to_frame.egg-info/PKG-INFO
+writing dependency_links to ../../build/move_tool_to_frame/move_tool_to_frame.egg-info/dependency_links.txt
+writing entry points to ../../build/move_tool_to_frame/move_tool_to_frame.egg-info/entry_points.txt
+writing requirements to ../../build/move_tool_to_frame/move_tool_to_frame.egg-info/requires.txt
+writing top-level names to ../../build/move_tool_to_frame/move_tool_to_frame.egg-info/top_level.txt
+reading manifest file '../../build/move_tool_to_frame/move_tool_to_frame.egg-info/SOURCES.txt'
+writing manifest file '../../build/move_tool_to_frame/move_tool_to_frame.egg-info/SOURCES.txt'
+running build
+running build_py
+copying move_tool_to_frame/move_tool_to_frame_node.py -> /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build/lib/move_tool_to_frame
+running install
+running install_lib
+creating /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame
+copying /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build/lib/move_tool_to_frame/__init__.py -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame
+copying /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build/lib/move_tool_to_frame/move_tool_to_frame_node.py -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame
+byte-compiling /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame/move_tool_to_frame_node.py to move_tool_to_frame_node.cpython-310.pyc
+  File "/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame/move_tool_to_frame_node.py", line 48
+    为别的添加这个success的引导逻辑!!!
+                          ^
+SyntaxError: invalid syntax
+
+running install_data
+copying resource/move_tool_to_frame -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/share/ament_index/resource_index/packages
+copying package.xml -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/share/move_tool_to_frame
+running install_egg_info
+Copying ../../build/move_tool_to_frame/move_tool_to_frame.egg-info to /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame-0.0.0-py3.10.egg-info
+running install_scripts
+Installing move_tool_to_frame_node script to /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/move_tool_to_frame
+writing list of installed files to '/home/pmlab/yueju/move_tool/build/move_tool_to_frame/install.log'

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = calibration_interface_assembly_dotnetcore
+build_property.ProjectDir = /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/

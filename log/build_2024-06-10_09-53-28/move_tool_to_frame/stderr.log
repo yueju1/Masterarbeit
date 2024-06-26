@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+  File "/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move_tool_to_frame/move_tool_to_frame_node.py", line 48
+    为别的添加这个success的引导逻辑!!!
+                          ^
+SyntaxError: invalid syntax
+

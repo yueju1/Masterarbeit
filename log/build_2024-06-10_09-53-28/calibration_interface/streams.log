@@ -1,0 +1,46 @@
+[0.083s] Invoking command in '/home/pmlab/yueju/move_tool/build/calibration_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/rajan_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/rajan_ros2_ws/install/pm_smaract_gripper:/home/pmlab/rajan_ros2_ws/install/pm_robot_control_test:/home/pmlab/rajan_ros2_ws/install/pm_confocal:/home/pmlab/ros2_ws/install/ros_sequential_action_programmer:/opt/ros/humble /usr/bin/cmake /home/pmlab/yueju/move_tool/src/calibration_interface -DCMAKE_INSTALL_PREFIX=/home/pmlab/yueju/move_tool/install/calibration_interface
+[0.227s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.578s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.038s] -- Found rosidl_default_generators: 1.2.0 (/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_default_generators/cmake)
+[1.065s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.150s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.835s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.104s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.629s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.001s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.304s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.394s] -- Found ament_cmake_export_assemblies: 0.0.0 (/home/pmlab/Documents/ros2-for-unity/install/share/ament_cmake_export_assemblies/cmake)
+[3.496s] -- Found dotnet_cmake_module: 0.0.0 (/home/pmlab/Documents/ros2-for-unity/install/share/dotnet_cmake_module/cmake)
+[3.683s] -- Found .NET Core: 6.0.128
+[3.683s] -- Using Framework: netstandard2.0
+[3.684s] -- Using Framework: netstandard2.0
+[3.684s] -- Using Runtime: linux-x64
+[3.725s] -- Found ros2cs_common: 2.0.0 (/home/pmlab/Documents/ros2-for-unity/install/share/ros2cs_common/cmake)
+[4.370s] -- Generating C# code for ROS interfaces  and /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+[4.371s] -- Adding custom target
+[4.371s] [0mLink libraries: calibration_interface__rosidl_typesupport_c[0m
+[4.376s] [0mLink libraries: calibration_interface__rosidl_typesupport_introspection_c[0m
+[4.380s] [0mLink libraries: calibration_interface__rosidl_typesupport_fastrtps_c[0m
+[4.385s] [0mInstall targets[0m
+[4.421s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[4.494s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.495s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[4.495s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[4.547s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.799s] -- Added test 'lint_cmake' to check CMake code style
+[4.810s] -- Added test 'xmllint' to check XML markup files
+[4.913s] -- Configuring done
+[5.260s] -- Generating done
+[5.270s] -- Build files have been written to: /home/pmlab/yueju/move_tool/build/calibration_interface
+[5.280s] Invoked command in '/home/pmlab/yueju/move_tool/build/calibration_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/rajan_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/rajan_ros2_ws/install/pm_smaract_gripper:/home/pmlab/rajan_ros2_ws/install/pm_robot_control_test:/home/pmlab/rajan_ros2_ws/install/pm_confocal:/home/pmlab/ros2_ws/install/ros_sequential_action_programmer:/opt/ros/humble /usr/bin/cmake /home/pmlab/yueju/move_tool/src/calibration_interface -DCMAKE_INSTALL_PREFIX=/home/pmlab/yueju/move_tool/install/calibration_interface
+[5.282s] Invoking command in '/home/pmlab/yueju/move_tool/build/calibration_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/rajan_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/rajan_ros2_ws/install/pm_smaract_gripper:/home/pmlab/rajan_ros2_ws/install/pm_robot_control_test:/home/pmlab/rajan_ros2_ws/install/pm_confocal:/home/pmlab/ros2_ws/install/ros_sequential_action_programmer:/opt/ros/humble /usr/bin/cmake --build /home/pmlab/yueju/move_tool/build/calibration_interface -- -j24 -l24
+[5.358s] [35m[1mConsolidate compiler generated dependencies of target calibration_interface__rosidl_generator_c[0m
+[5.369s] failed to create symbolic link '/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_python/calibration_interface/calibration_interface' because existing path cannot be removed: Is a directory
+[5.370s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_calibration_interface.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_calibration_interface] Error 1
+[5.371s] gmake[1]: *** [CMakeFiles/Makefile2:565: CMakeFiles/ament_cmake_python_symlink_calibration_interface.dir/all] Error 2
+[5.371s] gmake[1]: *** Waiting for unfinished jobs....
+[5.372s] [  2%] Built target calibration_interface__cs
+[5.373s] [  4%] Built target calibration_interface__cpp
+[5.600s] [ 10%] Built target calibration_interface__rosidl_generator_c
+[5.601s] gmake: *** [Makefile:146: all] Error 2
+[5.605s] Invoked command in '/home/pmlab/yueju/move_tool/build/calibration_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/rajan_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/rajan_ros2_ws/install/pm_smaract_gripper:/home/pmlab/rajan_ros2_ws/install/pm_robot_control_test:/home/pmlab/rajan_ros2_ws/install/pm_confocal:/home/pmlab/ros2_ws/install/ros_sequential_action_programmer:/opt/ros/humble /usr/bin/cmake --build /home/pmlab/yueju/move_tool/build/calibration_interface -- -j24 -l24

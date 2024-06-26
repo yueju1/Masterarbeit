@@ -1,0 +1,19 @@
+[0.567s] Invoking command in '/home/pmlab/yueju/move_tool/build/move_tool_to_frame': PYTHONPATH=/home/pmlab/yueju/move_tool/build/move_tool_to_frame/prefix_override:/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build --no-deps symlink_data
+[0.809s] running develop
+[0.810s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.811s]   warnings.warn(
+[0.982s] running egg_info
+[0.982s] writing move_tool_to_frame.egg-info/PKG-INFO
+[0.983s] writing dependency_links to move_tool_to_frame.egg-info/dependency_links.txt
+[0.983s] writing entry points to move_tool_to_frame.egg-info/entry_points.txt
+[0.983s] writing requirements to move_tool_to_frame.egg-info/requires.txt
+[0.983s] writing top-level names to move_tool_to_frame.egg-info/top_level.txt
+[0.984s] reading manifest file 'move_tool_to_frame.egg-info/SOURCES.txt'
+[0.985s] writing manifest file 'move_tool_to_frame.egg-info/SOURCES.txt'
+[0.986s] running build_ext
+[0.986s] Creating /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move-tool-to-frame.egg-link (link to .)
+[0.987s] Installing move_tool_to_frame_node script to /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/move_tool_to_frame
+[0.987s] 
+[0.987s] Installed /home/pmlab/yueju/move_tool/build/move_tool_to_frame
+[0.987s] running symlink_data
+[1.004s] Invoked command in '/home/pmlab/yueju/move_tool/build/move_tool_to_frame' returned '0': PYTHONPATH=/home/pmlab/yueju/move_tool/build/move_tool_to_frame/prefix_override:/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build --no-deps symlink_data

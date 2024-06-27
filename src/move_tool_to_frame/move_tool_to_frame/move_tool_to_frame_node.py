@@ -50,6 +50,8 @@ class MoveToolToFrame(rclpy.node.Node):
         if m.success == True:
             self.get_logger().info('wwwwwww')
             self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
+            time.sleep(1)
+            n = self.send_rotate_request()
 
         # clients = MoveToolToFrame()
         
@@ -74,16 +76,18 @@ class MoveToolToFrame(rclpy.node.Node):
     def image_callback(self, data):
         img = self.br.imgmsg_to_cv2(data)
 
-        print(img.shape)
+        # print(img.shape)
 
-        img2 = img[200:365, 620:800]
+        img2 = img[150:300, 400:580]
 
         
 
 
         median = cv2.medianBlur(img2,9)
 
-        canny = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)
+        canny1 = cv2.Canny(img2, 50, 150, apertureSize=3, L2gradient=True)
+
+        canny2 = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)
 
         # contours, _ = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)  
 
@@ -133,11 +137,20 @@ class MoveToolToFrame(rclpy.node.Node):
         
         cv2.namedWindow('Circle',0)
         cv2.resizeWindow('Circle',1000,1000)
-        
         cv2.imshow('Circle', img2)
-        cv2.namedWindow('Circle1',0)
-        cv2.resizeWindow('Circle1',1000,1000)
-        cv2.imshow('Circle1',canny)
+
+        # cv2.namedWindow('Circle1',0)
+        # cv2.resizeWindow('Circle1',1000,1000)
+        # cv2.imshow('Circle1',median)
+
+        # cv2.namedWindow('Circle2',0)
+        # cv2.resizeWindow('Circle2',1000,1000)
+        # cv2.imshow('Circle2', canny1)
+
+        # cv2.namedWindow('Circle3',0)
+        # cv2.resizeWindow('Circle3',1000,1000)
+        # cv2.imshow('Circle3', canny2)
+
         cv2.waitKey(1)
 
     def send_move_request(self):
@@ -151,7 +164,7 @@ class MoveToolToFrame(rclpy.node.Node):
         
         self.req.target_frame = 'Camera_Station_TCP'
         self.req.execute_movement = True
-        self.req.translation.x = 0.002
+        self.req.translation.x = 0.0
         self.req.translation.y = 0.0
         self.req.translation.z = 0.0
         
@@ -178,10 +191,10 @@ class MoveToolToFrame(rclpy.node.Node):
         
         self.req3.target_frame = 'Camera_Station_TCP'
         self.req.execute_movement = True
-        w,x,y,z= transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = 0.0, axes= 'sxyz')
-        self.req3.translation.x = 0.0
-        self.req3.translation.y = 0.0
-        self.req3.translation.z = 0.0
+        w,x,y,z= transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = 30.0, axes= 'sxyz')
+        # self.req3.translation.x = 0.0
+        # self.req3.translation.y = 0.0
+        # self.req3.translation.z = 0.0
         self.req3.rotation.x = x
         self.req3.rotation.y = y
         self.req3.rotation.z = z
@@ -189,6 +202,7 @@ class MoveToolToFrame(rclpy.node.Node):
         self.get_logger().info('%s,%s,%s,%s'%(x,y,z,w))
 
         self.future3 = self.client.call_async(self.req3)
+        rclpy.spin_until_future_complete(self, self.future3)
 
         self.get_logger().info('Sending the rotation request...')
 

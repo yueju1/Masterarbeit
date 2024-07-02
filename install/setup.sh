@@ -35,15 +35,15 @@ COLCON_CURRENT_PREFIX="/opt/ros/humble"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
 # setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
-COLCON_CURRENT_PREFIX="/home/pmlab/rajan_ros2_ws/install"
+COLCON_CURRENT_PREFIX="/home/pmlab/yueju/match_robot/install"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
 # setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
-COLCON_CURRENT_PREFIX="/home/pmlab/Documents/ros2-for-unity/install"
+COLCON_CURRENT_PREFIX="/home/pmlab/ros2-for-unity/ros2-for-unity/install"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
 # setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
-COLCON_CURRENT_PREFIX="/home/pmlab/ros2_ws/install"
+COLCON_CURRENT_PREFIX="/home/pmlab/pm_ros2_ws/install"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
 

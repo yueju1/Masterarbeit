@@ -1,0 +1,38 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/pmlab/yueju/move_tool/build/move_tool_to_frame",
+        "/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages",
+        "/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages",
+        "/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_vision_manager/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_vision_app/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_robot_control_test/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_msgs/local/lib/python3.10/dist-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_confocal/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_co_pilot/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_manager/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/pmlab/yueju/move_tool/build/move_tool_to_frame",
+        "/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages",
+        "/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages",
+        "/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_vision_manager/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_vision_app/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_robot_control_test/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_msgs/local/lib/python3.10/dist-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_confocal/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/pm_co_pilot/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_manager/lib/python3.10/site-packages",
+        "/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

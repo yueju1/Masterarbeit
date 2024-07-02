@@ -1,22 +1,22 @@
 {
   "package_name": "calibration_interface",
   "output_dir": "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface",
-  "template_dir": "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource",
+  "template_dir": "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource",
   "idl_tuples": [
     "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface:srv/CalibrateGripper.idl"
   ],
   "target_dependencies": [
-    "/home/pmlab/Documents/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs",
-    "/home/pmlab/Documents/ros2-for-unity/install/local/lib/python3.10/dist-packages/rosidl_generator_cs/__init__.py",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl_typesupport.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.cs.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg_typesupport.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.cs.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv_typesupport.c.em",
-    "/home/pmlab/Documents/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.cs.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/local/lib/python3.10/dist-packages/rosidl_generator_cs/__init__.py",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl_typesupport.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.cs.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg_typesupport.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.cs.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv_typesupport.c.em",
+    "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.cs.em",
     "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl"
   ]
 }

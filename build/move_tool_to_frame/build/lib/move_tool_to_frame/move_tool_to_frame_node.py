@@ -1,3 +1,4 @@
+import cv2
 import rclpy
 import rclpy.node
 from pm_moveit_interfaces.srv import MoveToFrame 
@@ -44,7 +45,7 @@ class MoveToolToFrame(rclpy.node.Node):
         self.R = 0   
 
 
-        m = self.send_move_request()
+        # m = self.send_move_request()
 
         # if m.success == True:
         #     self.get_logger().info('wwwwwww')
@@ -52,7 +53,7 @@ class MoveToolToFrame(rclpy.node.Node):
 
         #     # zusammen unten zwei
         # self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
-        # n = self.send_rotate_request()
+        n = self.send_rotate_request()
             
        
         
@@ -81,62 +82,72 @@ class MoveToolToFrame(rclpy.node.Node):
 
         # img2 = img[150:300, 400:580]
 
-        img2 = img[150:360, 600:850]
+        img2 = img[175:340, 630:810]
 
-        median = cv2.medianBlur(img2,9)
+        
+        self.col = cv2.threshold(img2, 244, 255, cv2.THRESH_BINARY)[1]
+
+        median = cv2.medianBlur(self.col,5)
 
         canny1 = cv2.Canny(img2, 50, 150, apertureSize=3, L2gradient=True)
 
-        canny2 = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)
+        # canny2 = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)   
+        canny2 = cv2.Canny(median, 700, 830, apertureSize=3, L2gradient=True)
 
         contours, _ = cv2.findContours(canny2, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)  
-        cv2.drawContours(img2, contours, -1, (0, 255, 0), 1)
-        # ellipse = []
-        # x = 0
-        # y = 0
-        # m1 = 0
-        # m2 = 0
-        # r = 0
+        # cv2.drawContours(median, contours, -1, (0, 255, 0), 1)
+        # print(contours)
+        ellipse = []
+        x = 0
+        y = 0
+        m1 = 0
+        m2 = 0
+        r = 0
           
-        # # self.col = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-
-        # for i in range(len(contours)): 
-
-        #     if len(contours[i]) >= 100 and len(contours[i]) <= 500:
-  
-        #         retval = cv2.fitEllipseDirect(contours[i])          
-                
-        #         if retval[1][0] > 105.0 and retval[1][1] < 120.0 and (retval[1][1]-retval[1][0]) <= 5:
-
-        #             cv2.ellipse(img, retval, (0, 0, 255), 1) 
-        #             cv2.circle(img, (int(retval[0][0]),int(retval[0][1])),1, (0, 0, 255), -1)
-
-        #             ellipse.append(retval)
-        #             x += retval[0][0]
-        #             y += retval[0][1]
-
-        #             r += (retval[1][0]/2 + retval[1][1]/2)/2
-                  
-        # if len(ellipse) != 0: 
-        #     m1 += x/len(ellipse)
-        #     m2 += y/len(ellipse)
-        #     self.r += r/len(ellipse)
-           
-        # self.list.append([m1,m2])
-        # self.R = self.r/len(self.list)
-            
-        # for point in self.list:
         
-        #     cv2.circle(img, (int(point[0]), int(point[1])), 1, (0, 0, 255), -1)
+
+        for i in range(len(contours)): 
+            
+            # if len(contours[i]) >= 100 and len(contours[i]) <= 500:
+  
+                retval = cv2.fitEllipseDirect(contours[i])  
+                # if retval[1][0] < 50 and retval[1][0] > 10:        
+                # print(retval)    
+                # cv2.circle(median, (int(retval[0][0]), int(retval[0][1])), 1, (0, 0, 255), -1)
+        #         if retval[1][0] > 105.0 and retval[1][1] < 120.0 and (retval[1][1]-retval[1][0]) <= 5:
+                if retval[1][0] > 10 and retval[1][0]< 20:
+
+
+
+                    cv2.ellipse(median, retval, (0, 0, 255), 1) 
+                    cv2.circle(median, (int(retval[0][0]),int(retval[0][1])),1, (0, 0, 255), -1)
+
+                    ellipse.append(retval)
+                    x += retval[0][0]
+                    y += retval[0][1]
+
+                    r += (retval[1][0]/2 + retval[1][1]/2)/2
+                  
+        if len(ellipse) != 0: 
+            m1 += x/len(ellipse)
+            m2 += y/len(ellipse)
+            self.r += r/len(ellipse)
+           
+        self.list.append([m1,m2])
+        self.R = self.r/len(self.list)
+            
+        for point in self.list:
+        
+            cv2.circle(median, (int(point[0]), int(point[1])), 1, (0, 0, 255), -1)
 
         
         cv2.namedWindow('Circle',0)
         cv2.resizeWindow('Circle',1000,1000)
-        cv2.imshow('Circle', img2)
+        cv2.imshow('Circle', median)
 
-        # cv2.namedWindow('Circle1',0)
-        # cv2.resizeWindow('Circle1',1000,1000)
-        # cv2.imshow('Circle1',median)
+        cv2.namedWindow('Circle1',0)
+        cv2.resizeWindow('Circle1',1000,1000)
+        cv2.imshow('Circle1',self.col)
 
         # cv2.namedWindow('Circle2',0)
         # cv2.resizeWindow('Circle2',1000,1000)
@@ -185,7 +196,7 @@ class MoveToolToFrame(rclpy.node.Node):
         self.req3.execute_movement = True
 
         self.get_logger().info('Sending the rotation request...')
-        q = transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = 30.0, axes= 'sxyz')
+        q = transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = -50.0, axes= 'sxyz')
        
         self.req3.rotation.x = q[1]
         self.req3.rotation.y = q[2]

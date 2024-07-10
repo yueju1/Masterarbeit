@@ -1,3 +1,2 @@
 [console_scripts]
 move_tool_to_frame_node = move_tool_to_frame.move_tool_to_frame_node:main
-

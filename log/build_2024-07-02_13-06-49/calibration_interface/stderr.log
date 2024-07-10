@@ -1,9 +1,0 @@
-[0mLink libraries: calibration_interface__rosidl_typesupport_c[0m
-[0mLink libraries: calibration_interface__rosidl_typesupport_fastrtps_c[0m
-[0mLink libraries: calibration_interface__rosidl_typesupport_introspection_c[0m
-[0mInstall targets[0m
-failed to create symbolic link '/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_python/calibration_interface/calibration_interface' because existing path cannot be removed: Is a directory
-gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_calibration_interface.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_calibration_interface] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:565: CMakeFiles/ament_cmake_python_symlink_calibration_interface.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-gmake: *** [Makefile:146: all] Error 2

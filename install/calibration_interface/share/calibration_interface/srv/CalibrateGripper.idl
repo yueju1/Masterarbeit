@@ -1,15 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from calibration_interface/srv/CalibrateGripper.srv
-// generated code does not contain a copyright notice
-
-
-module calibration_interface {
-  module srv {
-    struct CalibrateGripper_Request {
-      boolean excute_calibration;
-    };
-    struct CalibrateGripper_Response {
-      boolean success;
-    };
-  };
-};
+/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl

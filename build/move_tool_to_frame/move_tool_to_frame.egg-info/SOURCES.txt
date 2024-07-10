@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/PKG-INFO
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/SOURCES.txt
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/dependency_links.txt
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/entry_points.txt
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/requires.txt
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/top_level.txt
-../../build/move_tool_to_frame/move_tool_to_frame.egg-info/zip-safe
 move_tool_to_frame/__init__.py
 move_tool_to_frame/move_tool_to_frame_node.py
 move_tool_to_frame.egg-info/PKG-INFO

@@ -1,0 +1,259 @@
+[0.294s] Invoking command in '/home/pmlab/yueju/move_tool/build/calibration_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake /home/pmlab/yueju/move_tool/src/calibration_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pmlab/yueju/move_tool/install/calibration_interface
+[0.376s] -- The C compiler identification is GNU 11.4.0
+[0.437s] -- The CXX compiler identification is GNU 11.4.0
+[0.444s] -- Detecting C compiler ABI info
+[0.530s] -- Detecting C compiler ABI info - done
+[0.539s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.539s] -- Detecting C compile features
+[0.540s] -- Detecting C compile features - done
+[0.543s] -- Detecting CXX compiler ABI info
+[0.634s] -- Detecting CXX compiler ABI info - done
+[0.640s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.641s] -- Detecting CXX compile features
+[0.641s] -- Detecting CXX compile features - done
+[0.653s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.045s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.110s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.277s] -- Found rosidl_default_generators: 1.2.0 (/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_default_generators/cmake)
+[1.299s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.339s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.474s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.559s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.860s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.091s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.357s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.362s] -- Found ament_cmake_export_assemblies: 0.0.0 (/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/ament_cmake_export_assemblies/cmake)
+[2.366s] -- Found dotnet_cmake_module: 0.0.0 (/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake)
+[2.508s] -- Found DotNetCore: /usr/bin/dotnet  
+[2.508s] -- Found .NET Core: 7.0.119
+[2.508s] -- Using Framework: netstandard2.0
+[2.508s] -- Using Framework: netstandard2.0
+[2.508s] -- Using Runtime: linux-x64
+[2.513s] -- Found ros2cs_common: 2.0.0 (/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/ros2cs_common/cmake)
+[2.724s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.768s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.838s] -- Generating C# code for ROS interfaces  and /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+[2.839s] -- Adding custom target
+[2.839s] [0mLink libraries: calibration_interface__rosidl_typesupport_c[0m
+[2.844s] [0mLink libraries: calibration_interface__rosidl_typesupport_fastrtps_c[0m
+[2.848s] [0mLink libraries: calibration_interface__rosidl_typesupport_introspection_c[0m
+[2.852s] [0mInstall targets[0m
+[2.879s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.894s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.930s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.930s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.930s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.930s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.954s] -- Found PythonExtra: .so  
+[3.022s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.109s] -- Added test 'lint_cmake' to check CMake code style
+[3.111s] -- Added test 'xmllint' to check XML markup files
+[3.117s] -- Configuring done
+[3.156s] -- Generating done
+[3.159s] -- Build files have been written to: /home/pmlab/yueju/move_tool/build/calibration_interface
+[3.168s] Invoked command in '/home/pmlab/yueju/move_tool/build/calibration_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake /home/pmlab/yueju/move_tool/src/calibration_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pmlab/yueju/move_tool/install/calibration_interface
+[3.169s] Invoking command in '/home/pmlab/yueju/move_tool/build/calibration_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/pmlab/yueju/move_tool/build/calibration_interface -- -j16 -l16
+[3.227s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.243s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.244s] [  6%] [34m[1mGenerating C# code for ROS interfaces[0m
+[3.254s] [  6%] Built target ament_cmake_python_symlink_calibration_interface
+[3.475s] [  6%] Built target calibration_interface__cpp
+[3.489s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.489s] [ 15%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_generator_c.dir/rosidl_generator_c/calibration_interface/srv/detail/calibrate_gripper__functions.c.o[0m
+[3.489s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.489s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.497s] running egg_info
+[3.497s] creating calibration_interface.egg-info
+[3.509s] [ 15%] Built target calibration_interface__cs
+[3.517s] writing calibration_interface.egg-info/PKG-INFO
+[3.518s] writing dependency_links to calibration_interface.egg-info/dependency_links.txt
+[3.518s] writing top-level names to calibration_interface.egg-info/top_level.txt
+[3.518s] writing manifest file 'calibration_interface.egg-info/SOURCES.txt'
+[3.541s] [ 17%] [34m[1m/usr/bin/cmake;-version;/usr/bin/dotnet restore calibration_interface_assembly_dotnetcore.csproj;          /usr/bin/dotnet build calibration_interface_assembly_dotnetcore.csproj -> /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly[0m
+[3.553s] [ 20%] [32m[1mLinking C shared library libcalibration_interface__rosidl_generator_c.so[0m
+[3.583s] reading manifest file 'calibration_interface.egg-info/SOURCES.txt'
+[3.583s] writing manifest file 'calibration_interface.egg-info/SOURCES.txt'
+[3.597s] cmake version 3.22.1
+[3.597s] 
+[3.597s] CMake suite maintained and supported by Kitware (kitware.com/cmake).
+[3.599s] [ 20%] Built target calibration_interface__rosidl_generator_c
+[3.615s] [ 20%] Built target ament_cmake_python_build_calibration_interface_egg
+[3.616s] [ 26%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.616s] [ 26%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.616s] [ 26%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.740s] [ 28%] [32mBuilding CXX object CMakeFiles/calibration_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/calibration_interface/srv/detail/dds_fastrtps/calibrate_gripper__type_support.cpp.o[0m
+[3.741s] [ 31%] [32mBuilding CXX object CMakeFiles/calibration_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/calibration_interface/srv/calibrate_gripper__type_support.cpp.o[0m
+[3.765s] [ 33%] [32mBuilding CXX object CMakeFiles/calibration_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/calibration_interface/srv/detail/calibrate_gripper__type_support.cpp.o[0m
+[3.830s] [?1h=[ 35%] [32mBuilding CXX object CMakeFiles/calibration_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/calibration_interface/srv/calibrate_gripper__type_support.cpp.o[0m
+[3.857s] [ 37%] [32mBuilding CXX object CMakeFiles/calibration_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/calibration_interface/srv/detail/calibrate_gripper__type_support_c.cpp.o[0m
+[3.867s] [ 40%] [32m[1mLinking CXX shared library libcalibration_interface__rosidl_typesupport_c.so[0m
+[3.893s] [ 42%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/calibration_interface/srv/detail/calibrate_gripper__type_support.c.o[0m
+[3.920s] [ 42%] Built target calibration_interface__rosidl_typesupport_c
+[3.934s] [ 44%] [32m[1mLinking C shared library libcalibration_interface__rosidl_typesupport_introspection_c.so[0m
+[3.952s] [ 48%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c.o[0m
+[3.952s] [ 48%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o[0m
+[3.977s] [ 48%] Built target calibration_interface__rosidl_typesupport_introspection_c
+[3.991s] [ 51%] [32m[1mLinking C shared library rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_c_native.so[0m
+[4.010s] [ 53%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o[0m
+[4.010s] [ 55%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.037s] [ 57%] [32m[1mLinking CXX shared library libcalibration_interface__rosidl_typesupport_cpp.so[0m
+[4.040s] [ 60%] Built target calibration_interface_srv_calibrate_gripper__rosidl_typesupport_c
+[4.060s] [ 62%] [32m[1mLinking C shared library rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so[0m
+[4.087s] [ 62%] Built target calibration_interface__rosidl_typesupport_cpp
+[4.102s] [ 64%] Built target calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c
+[4.119s] [ 66%] [32m[1mLinking CXX shared library libcalibration_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.135s] [ 68%] [32m[1mLinking CXX shared library libcalibration_interface__rosidl_typesupport_introspection_cpp.so[0m
+[4.161s] [ 71%] [32m[1mLinking CXX shared library libcalibration_interface__rosidl_typesupport_fastrtps_c.so[0m
+[4.185s] [ 71%] Built target calibration_interface__rosidl_typesupport_introspection_cpp
+[4.188s] [ 71%] Built target calibration_interface__rosidl_typesupport_fastrtps_cpp
+[4.230s] [ 71%] Built target calibration_interface__rosidl_typesupport_fastrtps_c
+[4.260s] [ 75%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o[0m
+[4.261s] [ 75%] [32mBuilding C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.261s] [ 75%] Built target calibration_interface
+[4.276s]   Determining projects to restore...
+[4.291s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.302s] [ 80%] [32m[1mLinking C shared library rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c_native.so[0m
+[4.344s] [ 82%] Built target calibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c
+[4.564s] [ 82%] Built target calibration_interface__py
+[4.595s] [ 84%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_generator_py.dir/rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c.o[0m
+[4.647s]   Restored /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/calibration_interface_assembly_dotnetcore.csproj (in 133 ms).
+[4.713s] [ 86%] [32m[1mLinking C shared library rosidl_generator_py/calibration_interface/libcalibration_interface__rosidl_generator_py.so[0m
+[4.760s] [ 86%] Built target calibration_interface__rosidl_generator_py
+[4.789s] [ 93%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[4.789s] [ 93%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.789s] [ 93%] [32mBuilding C object CMakeFiles/calibration_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.851s] [?1h=MSBuild version 17.4.8+6918b863a for .NET
+[4.877s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/calibration_interface/calibration_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.880s] [100%] [32m[1mLinking C shared library rosidl_generator_py/calibration_interface/calibration_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.880s] [100%] [32m[1mLinking C shared library rosidl_generator_py/calibration_interface/calibration_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.919s] [100%] Built target calibration_interface__rosidl_typesupport_c__pyext
+[4.922s] [100%] Built target calibration_interface__rosidl_typesupport_fastrtps_c__pyext
+[4.922s] [100%] Built target calibration_interface__rosidl_typesupport_introspection_c__pyext
+[5.261s]   Determining projects to restore...
+[5.556s]   All projects are up-to-date for restore.
+[6.673s]   calibration_interface_assembly_dotnetcore -> /home/pmlab/yueju/move_tool/build/calibration_interface/netstandard2.0/calibration_interface_assembly.dll
+[6.682s] [39;49m[92m
+[6.682s] Build succeeded.
+[6.682s] [39;49m    0 Warning(s)
+[6.682s] [39;49m    0 Error(s)
+[6.682s] [39;49m
+[6.682s] Time Elapsed 00:00:01.77
+[6.728s] [100%] Built target calibration_interface_assembly
+[6.743s] Invoked command in '/home/pmlab/yueju/move_tool/build/calibration_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/pmlab/yueju/move_tool/build/calibration_interface -- -j16 -l16
+[6.889s] Invoking command in '/home/pmlab/yueju/move_tool/build/calibration_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/pmlab/yueju/move_tool/build/calibration_interface
+[6.899s] -- Install configuration: ""
+[6.900s] -- Execute custom install script
+[6.900s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/ament_index/resource_index/rosidl_interfaces/calibration_interface
+[6.912s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/msg/rosidl_generator_c__visibility_control.h
+[6.925s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/calibrate_gripper.h
+[6.936s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__functions.h
+[6.947s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__struct.h
+[6.958s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__type_support.h
+[6.970s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/library_path.sh
+[6.981s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/library_path.dsv
+[6.993s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.004s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__rosidl_typesupport_fastrtps_c.h
+[7.017s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.029s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__rosidl_typesupport_introspection_c.h
+[7.040s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/calibrate_gripper.hpp
+[7.052s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__builder.hpp
+[7.063s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__struct.hpp
+[7.076s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__traits.hpp
+[7.087s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.098s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__rosidl_typesupport_fastrtps_cpp.hpp
+[7.109s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/include/calibration_interface/calibration_interface/srv/detail/calibrate_gripper__rosidl_typesupport_introspection_cpp.hpp
+[7.121s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/dotnet/calibration_interface_assembly.deps.json
+[7.132s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/dotnet/calibration_interface_assembly.dll
+[7.144s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/dotnet/ros2cs_common.dll
+[7.155s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/pythonpath.sh
+[7.167s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/pythonpath.dsv
+[7.179s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[7.190s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[7.204s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[7.218s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface-0.0.0-py3.10.egg-info/top_level.txt
+[7.230s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/__init__.py
+[7.242s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_c.c
+[7.253s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.264s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_introspection_c.c
+[7.277s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.289s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.300s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.313s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/libcalibration_interface__rosidl_generator_py.so
+[7.325s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv/__init__.py
+[7.338s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv/_calibrate_gripper.py
+[7.349s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv/_calibrate_gripper_s.c
+[7.361s] -- Up-to-date symlink: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.362s] -- Up-to-date symlink: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.362s] -- Up-to-date symlink: /home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/calibration_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.362s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/srv/CalibrateGripper.idl
+[7.375s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/srv/CalibrateGripper.srv
+[7.387s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/srv/CalibrateGripper_Request.msg
+[7.399s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/srv/CalibrateGripper_Response.msg
+[7.412s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/ament_index/resource_index/package_run_dependencies/calibration_interface
+[7.424s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/ament_index/resource_index/parent_prefix_path/calibration_interface
+[7.436s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/ament_prefix_path.sh
+[7.447s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/ament_prefix_path.dsv
+[7.459s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/path.sh
+[7.471s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/environment/path.dsv
+[7.482s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/local_setup.bash
+[7.493s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/local_setup.sh
+[7.505s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/local_setup.zsh
+[7.516s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/local_setup.dsv
+[7.528s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/package.dsv
+[7.540s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/ament_index/resource_index/packages/calibration_interface
+[7.551s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/rosidl_cmake-extras.cmake
+[7.563s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.574s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[7.585s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/ament_cmake_export_targets-extras.cmake
+[7.596s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.607s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.619s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.633s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/ament_cmake_export_assemblies-extras.cmake
+[7.643s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interfaceConfig.cmake
+[7.655s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interfaceConfig-version.cmake
+[7.665s] -- Symlinking: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/package.xml
+[7.676s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_generator_c.so
+[7.677s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_generator_c.so" to ""
+[7.677s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_fastrtps_c.so
+[7.677s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_fastrtps_c.so" to ""
+[7.677s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_introspection_c.so
+[7.678s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_introspection_c.so" to ""
+[7.678s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_c.so
+[7.678s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_c.so" to ""
+[7.678s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_fastrtps_cpp.so
+[7.679s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.679s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_introspection_cpp.so
+[7.679s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[7.679s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_cpp.so
+[7.680s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_typesupport_cpp.so" to ""
+[7.680s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_c_native.so
+[7.680s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_c_native.so" to ""
+[7.680s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c_native.so
+[7.680s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_fastrtps_c_native.so" to ""
+[7.681s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so
+[7.681s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so" to ""
+[7.723s] Listing '/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface'...
+[7.723s] Compiling '/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/__init__.py'...
+[7.723s] Listing '/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv'...
+[7.724s] Compiling '/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv/__init__.py'...
+[7.724s] Compiling '/home/pmlab/yueju/move_tool/install/calibration_interface/local/lib/python3.10/dist-packages/calibration_interface/srv/_calibrate_gripper.py'...
+[7.728s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_generator_py.so
+[7.728s] -- Set runtime path of "/home/pmlab/yueju/move_tool/install/calibration_interface/lib/libcalibration_interface__rosidl_generator_py.so" to ""
+[7.728s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_generator_cExport.cmake
+[7.728s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_generator_cExport-noconfig.cmake
+[7.729s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[7.729s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.729s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_introspection_cExport.cmake
+[7.729s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.729s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_cExport.cmake
+[7.730s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_cExport-noconfig.cmake
+[7.730s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_generator_cppExport.cmake
+[7.730s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.730s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.730s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_introspection_cppExport.cmake
+[7.731s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.731s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_cppExport.cmake
+[7.731s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/calibration_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[7.731s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_generator_pyExport.cmake
+[7.732s] -- Installing: /home/pmlab/yueju/move_tool/install/calibration_interface/share/calibration_interface/cmake/export_calibration_interface__rosidl_generator_pyExport-noconfig.cmake
+[7.734s] Invoked command in '/home/pmlab/yueju/move_tool/build/calibration_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pmlab/yueju/match_robot/install/pneumatic_controller_listener:/home/pmlab/yueju/match_robot/install/pm_smaract_gripper:/home/pmlab/yueju/match_robot/install/pm_robot_control_test:/home/pmlab/yueju/match_robot/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/ros_sequential_action_programmer:/home/pmlab/pm_ros2_ws/install/pneumatic_controller_listener:/home/pmlab/pm_ros2_ws/install/pm_vision_manager:/home/pmlab/pm_ros2_ws/install/pm_vision_app:/home/pmlab/pm_ros2_ws/install/pm_robot_control_test:/home/pmlab/pm_ros2_ws/install/pm_msgs:/home/pmlab/pm_ros2_ws/install/pm_confocal:/home/pmlab/pm_ros2_ws/install/pm_co_pilot:/home/pmlab/pm_ros2_ws/install/assembly_scene_publisher:/home/pmlab/pm_ros2_ws/install/assembly_manager:/home/pmlab/pm_ros2_ws/install/assembly_manager_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/pmlab/yueju/move_tool/build/calibration_interface

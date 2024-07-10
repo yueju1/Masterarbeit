@@ -1,1 +1,1 @@
-from calibration_interface.srv._calibrate_gripper import CalibrateGripper  # noqa: F401
+/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/__init__.py

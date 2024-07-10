@@ -1,6 +1,1 @@
-setup.py
-calibration_interface/__init__.py
-calibration_interface.egg-info/PKG-INFO
-calibration_interface.egg-info/SOURCES.txt
-calibration_interface.egg-info/dependency_links.txt
-calibration_interface.egg-info/top_level.txt
+/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_python/calibration_interface/calibration_interface.egg-info/SOURCES.txt

@@ -1,12 +1,8 @@
 Metadata-Version: 2.1
-Name: move-tool-to-frame
+Name: move_tool_to_frame
 Version: 0.0.0
 Summary: TODO: Package description
-Home-page: UNKNOWN
 Maintainer: pmlab
 Maintainer-email: koch.leon1998@gmail.com
 License: TODO: License declaration
-Platform: UNKNOWN
-
-UNKNOWN
-
+Requires-Dist: setuptools

@@ -1,4 +1,1 @@
-srv/CalibrateGripper.idl
-srv/CalibrateGripper.srv
-srv/CalibrateGripper_Request.msg
-srv/CalibrateGripper_Response.msg
+/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/calibration_interface

@@ -1,7 +1,9 @@
 import cv2
 import rclpy
+import rclpy.logging
 import rclpy.node
 from pm_moveit_interfaces.srv import MoveToFrame 
+import rclpy.parameter
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
@@ -11,19 +13,21 @@ from calibration_interface.srv import CalibrateGripper
 import cv2
 import transforms3d
 import time
-
+from control_msgs.msg import JointTrajectoryControllerState
 
 class MoveToolToFrame(rclpy.node.Node):
 
     def __init__(self):
         super().__init__('move_tool_to_frame_service')
 
-        # self.notok = True
+        self.notok = True
         # self.notreadytosave = True
-        # self.notreadytocalibrate = True
+        self.notreadytocalibrate = False
 
-        # self.service = self.create_service(CalibrateGripper,'calibrate_gripper_server',self.start_calibration_callback)
+        self.service = self.create_service(CalibrateGripper,'calibrate_gripper_server',self.start_calibration_callback)
 
+
+        
 
         self.client = self.create_client(MoveToFrame, '/pm_moveit_server/move_tool_to_frame')
 
@@ -31,7 +35,7 @@ class MoveToolToFrame(rclpy.node.Node):
         
         while not self.client.wait_for_service(timeout_sec=1.0):
            self.get_logger().info('pm_moveit_server not available, waiting again...')
-
+        self.get_logger().info('server connected')
         # while not self.client2.wait_for_service(timeout_sec=1.0):
         #    self.get_logger().info('read_yaml_server not available, waiting again...')
 
@@ -39,71 +43,211 @@ class MoveToolToFrame(rclpy.node.Node):
         # self.req2 = ReadYaml.Request()
 
         self.br = CvBridge()
+
         
         self.list = []
         self.r = 0 
         self.R = 0   
-
-
-        # m = self.send_move_request()
-
+        self.reached_joint_number = 0
+        
+        # self.send_rotate_request()
+        
         # if m.success == True:
         #     self.get_logger().info('wwwwwww')
 
 
-        #     # zusammen unten zwei
-        self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
-        n = self.send_rotate_request()
-            
-       
+        # while self.notreadytocalibrate:
+                
+        #         if self.notreadytocalibrate == False:
+        #             self.get_logger().info('break')
+        #             break
+
+        # self.send_move_request()
+        # self.get_logger().info('11111111111111111111111')
         
+        # time.sleep(2.0)
+        # self.get_logger().info('111111222222222222222222222222222221111')
+        # self.send_rotate_request()
+        # self.get_logger().info('3333333')
+        
+        # self.declare_parameter('ok',value=0)
+       
 
     def start_calibration_callback(self,request,response):
-        self.get_logger().info('2222222222222222')
-
 
         if request.excute_calibration:
             self.get_logger().info('11111111111111111111111')
+            # self.set_parameters([rclpy.Parameter('ok',value=1)])
+            
+            # time.sleep(2.0)
+            self.sub = self.create_subscription(JointTrajectoryControllerState,
+                                            "pm_robot_xyz_axis_controller/state",
+                                            self.state_callback,
+                                            10)
+            
+            
+            self.timer = self.create_timer(1,self.check_callback)
+
+            self.send_move_request()
+            # self.save_yaml()
+            
             response.success = True # logik for success, self.parameter in bildverarbeitung ,...or success means excution starts successfully
-
-            # request.excute_calibration = False
-            self.get_logger().info('ssss')
-            # self.notreadytocalibrate = False
             
-            
-
         return response
         
+    
+    def check_callback(self):
+       
+       if self.notreadytocalibrate:
+            self.sub = self.create_subscription(Image,'/Image_Cam2_raw',self.image_callback, 10)
+            self.send_rotate_request()
+            self.timer.cancel()
+
+
+    
+    def state_callback(self,msg): 
+        self.get_logger().info('state_callback')
+        
+        for i in range(len(msg.desired.positions)):     
+            # self.get_logger().info('qqqqqqqqqqqqqqqqqqqqq')
+            if msg.desired.positions.tolist() == [-0.35950000000000176,-0.045816999999999705, 0.0190799999999959] and -0.000001 < msg.error.positions[i] < 0.000001:       
+                self.get_logger().info('Reached joint number:%s'%self.reached_joint_number)
+                if self.reached_joint_number <= i:
+
+                    self.reached_joint_number += 1
+              
+                
+        
+        if self.reached_joint_number == 3:
+            
+            # self.set_parameters([rclpy.Parameter('ok',value=1)])
+
+            self.notreadytocalibrate = True
+            
+
+    def send_move_request(self):
+        # while self.notreadytocalibrate:
+        #     self.get_logger().info('11111111111111111111111')
+        #     if self.notreadytocalibrate == False:
+        #         self.get_logger().info('break')
+        #         break
+        
+        # if: ob das ist sinnvoll
+
+        req = MoveToFrame.Request()
+        
+        req.target_frame = 'Camera_Station_TCP'
+        req.execute_movement = True
+        req.translation.x = 0.0
+        req.translation.y = 0.0
+        req.translation.z = 0.0
+        
+        
+        future1 = self.client.call_async(req)
+
+        self.get_logger().info('Sending the movement request...')
+        # if error in movit server ...
+        # while self.future1.done() != True:
+        
+        #     # self.get_logger().info('3333')
+        # self.notreadytocalibrate = False
+        
+        # rclpy.spin_until_future_complete(self, self.future1)
+        
+
+        
+        
+        return future1.result()
+
+
+    def send_rotate_request(self):
+        
+        
+        # while not self.notreadytocalibrate:
+        #     self.get_logger().info('g0g0g0g0g0g0g0gg0')
+        #     if self.notreadytocalibrate:           
+                                                                    
+        #         break
+            
+            # break
+
+        
+        req3 = MoveToFrame.Request()
+        req3.target_frame = 'PM_Robot_Tool_TCP'
+        req3.execute_movement = True
+
+        self.get_logger().info('Sending the rotation request...')
+        q = transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = 30.0, axes= 'sxyz')
+    
+        req3.rotation.x = q[1]
+        req3.rotation.y = q[2]
+        req3.rotation.z = q[3]
+        req3.rotation.w = q[0]
+        # self.get_logger().info('%s,%s,%s,%s'%(x,y,z,w))
+        
+        future3 = self.client.call_async(req3)
+        # rclpy.spin_until_future_complete(self, future3)
+        while rclpy.ok():
+            self.get_logger().info('Result')
+            rclpy.spin_once(self)
+            if future3.done():
+                try:
+                    response = future3.result()
+                    self.get_logger().info('Result of adding')
+                except Exception as e:
+                    self.get_logger().error('Service call failed %r' % (e,))
+                break
+
+        return future3.result()
 
     def image_callback(self, data):
+        # self.get_logger().info('calback callback call back')
+        # try:
+        # if self.get_parameter('ok').value == 1:   
+        #                                                  
+        # while not self.notreadytocalibrate:
+                
+        #     if self.notreadytocalibrate:
+                
+        #         break
+            
+
+        # while self.get_parameter('ok').value == int(0):
+                
+        #     if self.get_parameter('ok').value == int(1):           
+                                                                    
+        #         break
+            
         img = self.br.imgmsg_to_cv2(data)
+        
+        # self.get_logger().info('g1g1g1g1g1g1g11g1g1')
 
         # print(img.shape)
 
-        # img2 = img[150:300, 400:580]
+        # # img2 = img[150:300, 400:580]
 
-        # img2 = img[175:340, 630:810]
+        # # img2 = img[175:340, 630:810]
 
-        img2 = img[510:1100, 1580:2260]
+        # img2 = img[500:1480, 1500:2450]
         
-        self.col = cv2.threshold(img2, 244, 255, cv2.THRESH_BINARY)[1]
+        # self.col = cv2.threshold(img2, 244, 255, cv2.THRESH_BINARY)[1]
 
-        median = cv2.medianBlur(self.col,5)
+        # median = cv2.medianBlur(self.col,5)
 
-        canny1 = cv2.Canny(img2, 50, 150, apertureSize=3, L2gradient=True)
+        # canny1 = cv2.Canny(img2, 50, 150, apertureSize=3, L2gradient=True)
 
-        # canny2 = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)   
-        canny2 = cv2.Canny(median, 700, 830, apertureSize=3, L2gradient=True)
+        # # canny2 = cv2.Canny(median, 50, 150, apertureSize=3, L2gradient=True)   
+        # canny2 = cv2.Canny(median, 700, 830, apertureSize=3, L2gradient=True)
 
-        contours, _ = cv2.findContours(canny2, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)  
-        # cv2.drawContours(median, contours, -1, (0, 255, 0), 1)
-        # print(contours)
-        ellipse = []
-        x = 0
-        y = 0
-        m1 = 0
-        m2 = 0
-        r = 0
+        # contours, _ = cv2.findContours(canny2, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)  
+        # # cv2.drawContours(median, contours, -1, (0, 255, 0), 1)
+        # # print(contours)
+        # ellipse = []
+        # x = 0
+        # y = 0
+        # m1 = 0
+        # m2 = 0
+        # r = 0
           
         # for i in range(len(contours)): 
     
@@ -131,117 +275,59 @@ class MoveToolToFrame(rclpy.node.Node):
 
 
 
-        for i in range(len(contours)): 
+        # for i in range(len(contours)): 
             
-            if len(contours[i]) >= 70 and len(contours[i]) <= 100:
-                # print("length:",len(contours[i]))
-                retval = cv2.fitEllipseDirect(contours[i])  
-                # if retval[1][0] < 50 and retval[1][0] > 10:        
-                print("retval",retval)    
-                # cv2.circle(median, (int(retval[0][0]), int(retval[0][1])), 1, (0, 0, 255), -1)
-        #         if retval[1][0] > 105.0 and retval[1][1] < 120.0 and (retval[1][1]-retval[1][0]) <= 5:
-                if retval[1][0] > 10 and retval[1][0]< 80:
+        #     if len(contours[i]) >= 70 and len(contours[i]) <= 100:
+        #         # print("length:",len(contours[i]))
+        #         retval = cv2.fitEllipseDirect(contours[i])  
+        #         # if retval[1][0] < 50 and retval[1][0] > 10:        
+        #         print("retval",retval)    
+        #         # cv2.circle(median, (int(retval[0][0]), int(retval[0][1])), 1, (0, 0, 255), -1)
+        # #         if retval[1][0] > 105.0 and retval[1][1] < 120.0 and (retval[1][1]-retval[1][0]) <= 5:
+        #         if retval[1][0] > 10 and retval[1][0]< 80:
 
 
-                    cv2.ellipse(median, retval, (0, 0, 255), 1) 
-                    cv2.circle(median, (int(retval[0][0]),int(retval[0][1])),1, (0, 0, 255), -1)
+        #             cv2.ellipse(median, retval, (0, 0, 255), 1) 
+        #             cv2.circle(median, (int(retval[0][0]),int(retval[0][1])),1, (0, 0, 255), -1)
 
-                    ellipse.append(retval)
-                    x += retval[0][0]
-                    y += retval[0][1]
+        #             ellipse.append(retval)
+        #             x += retval[0][0]
+        #             y += retval[0][1]
 
-                    r += (retval[1][0]/2 + retval[1][1]/2)/2
+        #             r += (retval[1][0]/2 + retval[1][1]/2)/2
                   
-        if len(ellipse) != 0: 
-            m1 += x/len(ellipse)
-            m2 += y/len(ellipse)
-            self.r += r/len(ellipse)
+        # if len(ellipse) != 0: 
+        #     m1 += x/len(ellipse)
+        #     m2 += y/len(ellipse)
+        #     self.r += r/len(ellipse)
            
-        self.list.append([m1,m2])
-        self.R = self.r/len(self.list)
+        # self.list.append([m1,m2])
+        # self.R = self.r/len(self.list)
             
-        for point in self.list:
+        # for point in self.list:
         
-            cv2.circle(median, (int(point[0]), int(point[1])), 1, (0, 0, 255), -1)
+        #     cv2.circle(median, (int(point[0]), int(point[1])), 1, (0, 0, 255), -1)
 
         
         cv2.namedWindow('Circle',0)
         cv2.resizeWindow('Circle',1000,1000)
-        cv2.imshow('Circle', img2)
+        cv2.imshow('Circle', img)
 
 
-        cv2.namedWindow('Circle1',0)
-        cv2.resizeWindow('Circle1',1000,1000)
-        cv2.imshow('Circle1', median)
+            # cv2.namedWindow('Circle1',0)
+            # cv2.resizeWindow('Circle1',1000,1000)
+            # cv2.imshow('Circle1', median)
 
 
-        # cv2.namedWindow('Circle2',0)
-        # cv2.resizeWindow('Circle2',1000,1000)
-        # cv2.imshow('Circle2', canny1)
+            # cv2.namedWindow('Circle2',0)
+            # cv2.resizeWindow('Circle2',1000,1000)
+            # cv2.imshow('Circle2', canny1)
 
-        # cv2.namedWindow('Circle3',0)
-        # cv2.resizeWindow('Circle3',1000,1000)
-        # cv2.imshow('Circle3', canny2)
+            # cv2.namedWindow('Circle3',0)
+            # cv2.resizeWindow('Circle3',1000,1000)
+            # cv2.imshow('Circle3', canny2)
 
         cv2.waitKey(1)
-
-    def send_move_request(self):
-        # while self.notreadytocalibrate:
-            # self.get_logger().info('11111111111111111111111')
-        # if self.notreadytocalibrate == False:
-        #     self.get_logger().info('break')
-                # break
-        
-        # if: ob das ist sinnvoll
-        self.req = MoveToFrame.Request()
-        
-        self.req.target_frame = 'Camera_Station_TCP'
-        self.req.execute_movement = True
-        self.req.translation.x = 0.0
-        self.req.translation.y = 0.0
-        self.req.translation.z = 0.0
-        
-        
-        self.future1 = self.client.call_async(self.req)
-
-        self.get_logger().info('Sending the movement request...')
-        # if error in movit server ...
-
-        rclpy.spin_until_future_complete(self, self.future1)
-        
-        # time.sleep(3.0)
-
-        # self.save_yaml()
-       
-        return self.future1.result()
-
-
-    def send_rotate_request(self):
-        self.req3 = MoveToFrame.Request()
-        self.req3.target_frame = 'PM_Robot_Tool_TCP'
-        self.req3.execute_movement = True
-
-        self.get_logger().info('Sending the rotation request...')
-        q = transforms3d.euler.euler2quat(ai= 0.0, aj= 0.0, ak = -60.0, axes= 'sxyz')
-       
-        self.req3.rotation.x = q[1]
-        self.req3.rotation.y = q[2]
-        self.req3.rotation.z = q[3]
-        self.req3.rotation.w = q[0]
-        # self.get_logger().info('%s,%s,%s,%s'%(x,y,z,w))
-        
-        self.future3 = self.client.call_async(self.req3)
-        rclpy.spin_until_future_complete(self, self.future3)
-
-        
-        
-        return self.future3.result()
-
-
-
-
-
-
         
     def send_read_yaml_request(self):
         # while self.notok:
@@ -260,28 +346,30 @@ class MoveToolToFrame(rclpy.node.Node):
         return self.future2.result()
 
     def save_yaml(self):
-        # while self.notreadytosave:
-        #     # log info...
-        #     if  self.notreadytosave == False:
-        #         break
+        try:
+            if self.send_rotate_request().response.success == True:
+                
+                print(self.send_rotate_request().response.success)
+        except AttributeError:
+            pass
         
-        yaml = YAML()
+        # yaml = YAML()
    
-        with open ("/home/pmlab/yueju/offset.yaml"
-            , "r") as file:
-            joint_calibration = yaml.load(file)
+        # with open ("/home/pmlab/yueju/offset.yaml"
+        #     , "r") as file:
+        #     joint_calibration = yaml.load(file)
                                                                 
-            joint_calibration['PM_Robot_Tool_TCP_Joint']['x_offset'] = 0.3
-            joint_calibration['PM_Robot_Tool_TCP_Joint']['y_offset'] = 0.4
+        #     joint_calibration['PM_Robot_Tool_TCP_Joint']['x_offset'] = 0.3
+        #     joint_calibration['PM_Robot_Tool_TCP_Joint']['y_offset'] = 0.4
 
-        with open('/home/pmlab/yueju/offset.yaml','w') as new_file:
-            yaml.dump(joint_calibration, new_file)
+        # with open('/home/pmlab/yueju/offset.yaml','w') as new_file:
+        #     yaml.dump(joint_calibration, new_file)
         
-        self.notok = False
+        # self.notok = False
         
-        self.get_logger().info('YAML file updated successful!')
+        # self.get_logger().info('YAML file updated successful!')
        
-        self.send_read_yaml_request()
+        # self.send_read_yaml_request()
         
 
 def main():

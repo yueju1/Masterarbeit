@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from calibration_interface/srv/GripperCalibration.srv
+// generated code does not contain a copyright notice
+
+
+module calibration_interface {
+  module srv {
+    struct GripperCalibration_Request {
+      boolean execute_calibration;
+
+      boolean calibration_sim;
+
+      boolean calibration_real;
+    };
+    struct GripperCalibration_Response {
+      boolean success;
+    };
+  };
+};

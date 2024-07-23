@@ -22,13 +22,10 @@ _colcon_prefix_chain_bash_source_script() {
 COLCON_CURRENT_PREFIX="/opt/ros/humble"
 _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
-COLCON_CURRENT_PREFIX="/home/pmlab/yueju/match_robot/install"
+COLCON_CURRENT_PREFIX="/home/pmlab/pm_ros2_ws/install"
 _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
 # setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
 COLCON_CURRENT_PREFIX="/home/pmlab/ros2-for-unity/ros2-for-unity/install"
-_colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
-# setting COLCON_CURRENT_PREFIX avoids determining the prefix in the sourced script
-COLCON_CURRENT_PREFIX="/home/pmlab/pm_ros2_ws/install"
 _colcon_prefix_chain_bash_source_script "$COLCON_CURRENT_PREFIX/local_setup.bash"
 
 # source this prefix

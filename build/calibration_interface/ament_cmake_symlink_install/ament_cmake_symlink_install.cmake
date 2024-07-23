@@ -364,6 +364,9 @@ include("/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_sym
 # install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl" "DESTINATION" "share/calibration_interface/srv")
 ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl" "DESTINATION" "share/calibration_interface/srv")
 
+# install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/GripperCalibration.idl" "DESTINATION" "share/calibration_interface/srv")
+ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/GripperCalibration.idl" "DESTINATION" "share/calibration_interface/srv")
+
 # install(FILES "/home/pmlab/yueju/move_tool/src/calibration_interface/srv/CalibrateGripper.srv" "DESTINATION" "share/calibration_interface/srv")
 ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/src/calibration_interface/srv/CalibrateGripper.srv" "DESTINATION" "share/calibration_interface/srv")
 
@@ -372,6 +375,15 @@ ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_i
 
 # install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/CalibrateGripper_Response.msg" "DESTINATION" "share/calibration_interface/srv")
 ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/CalibrateGripper_Response.msg" "DESTINATION" "share/calibration_interface/srv")
+
+# install(FILES "/home/pmlab/yueju/move_tool/src/calibration_interface/srv/GripperCalibration.srv" "DESTINATION" "share/calibration_interface/srv")
+ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/src/calibration_interface/srv/GripperCalibration.srv" "DESTINATION" "share/calibration_interface/srv")
+
+# install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/GripperCalibration_Request.msg" "DESTINATION" "share/calibration_interface/srv")
+ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/GripperCalibration_Request.msg" "DESTINATION" "share/calibration_interface/srv")
+
+# install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/GripperCalibration_Response.msg" "DESTINATION" "share/calibration_interface/srv")
+ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_cmake/srv/GripperCalibration_Response.msg" "DESTINATION" "share/calibration_interface/srv")
 
 # install(FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/calibration_interface" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/pmlab/yueju/move_tool/src/calibration_interface" FILES "/home/pmlab/yueju/move_tool/build/calibration_interface/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/calibration_interface" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

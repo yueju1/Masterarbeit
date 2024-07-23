@@ -70,6 +70,10 @@ CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interfac
 CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__builder.hpp
 CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__struct.hpp
 CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__traits.hpp
+CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/gripper_calibration.hpp
+CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__builder.hpp
+CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__struct.hpp
+CMakeFiles/calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__traits.hpp
 
 rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -87,6 +91,7 @@ rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: /opt/ros/h
 rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl
+rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp: rosidl_adapter/calibration_interface/srv/GripperCalibration.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp__arguments.json
 
@@ -99,11 +104,27 @@ rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__struct.
 rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__traits.hpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__traits.hpp
 
+rosidl_generator_cpp/calibration_interface/srv/gripper_calibration.hpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/calibration_interface/srv/gripper_calibration.hpp
+
+rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__builder.hpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__builder.hpp
+
+rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__struct.hpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__struct.hpp
+
+rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__traits.hpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__traits.hpp
+
 calibration_interface__cpp: CMakeFiles/calibration_interface__cpp
 calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp
 calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__builder.hpp
 calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__struct.hpp
 calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__traits.hpp
+calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__builder.hpp
+calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__struct.hpp
+calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__traits.hpp
+calibration_interface__cpp: rosidl_generator_cpp/calibration_interface/srv/gripper_calibration.hpp
 calibration_interface__cpp: CMakeFiles/calibration_interface__cpp.dir/build.make
 .PHONY : calibration_interface__cpp
 

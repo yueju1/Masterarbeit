@@ -16,6 +16,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs"
   )
 
 

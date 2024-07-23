@@ -70,8 +70,10 @@ calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator
 calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_introspection_c.c
 calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_c.c
 calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py
+calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py
 calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/srv/__init__.py
 calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c
+calibration_interface__py/CMakeFiles/calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c
 
 rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +89,7 @@ rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typ
 rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl
+rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/calibration_interface/srv/GripperCalibration.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -99,11 +102,17 @@ rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typ
 rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py
 
+rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py
+
 rosidl_generator_py/calibration_interface/srv/__init__.py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/calibration_interface/srv/__init__.py
 
 rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c
+
+rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c
 
 calibration_interface__py: calibration_interface__py/CMakeFiles/calibration_interface__py
 calibration_interface__py: rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_c.c
@@ -112,6 +121,8 @@ calibration_interface__py: rosidl_generator_py/calibration_interface/_calibratio
 calibration_interface__py: rosidl_generator_py/calibration_interface/srv/__init__.py
 calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py
 calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c
+calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py
+calibration_interface__py: rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c
 calibration_interface__py: calibration_interface__py/CMakeFiles/calibration_interface__py.dir/build.make
 .PHONY : calibration_interface__py
 

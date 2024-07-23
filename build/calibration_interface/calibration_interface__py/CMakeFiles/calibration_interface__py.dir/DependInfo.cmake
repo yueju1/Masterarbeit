@@ -17,6 +17,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/__init__.py" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_py/calibration_interface/_calibration_interface_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

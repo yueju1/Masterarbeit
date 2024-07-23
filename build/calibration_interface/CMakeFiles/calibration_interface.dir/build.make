@@ -69,6 +69,9 @@ include CMakeFiles/calibration_interface.dir/progress.make
 CMakeFiles/calibration_interface: /home/pmlab/yueju/move_tool/src/calibration_interface/srv/CalibrateGripper.srv
 CMakeFiles/calibration_interface: rosidl_cmake/srv/CalibrateGripper_Request.msg
 CMakeFiles/calibration_interface: rosidl_cmake/srv/CalibrateGripper_Response.msg
+CMakeFiles/calibration_interface: /home/pmlab/yueju/move_tool/src/calibration_interface/srv/GripperCalibration.srv
+CMakeFiles/calibration_interface: rosidl_cmake/srv/GripperCalibration_Request.msg
+CMakeFiles/calibration_interface: rosidl_cmake/srv/GripperCalibration_Response.msg
 
 calibration_interface: CMakeFiles/calibration_interface
 calibration_interface: CMakeFiles/calibration_interface.dir/build.make

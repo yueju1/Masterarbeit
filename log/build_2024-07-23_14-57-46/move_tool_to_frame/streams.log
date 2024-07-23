@@ -1,0 +1,45 @@
+[1.329s] Invoking command in '/home/pmlab/yueju/move_tool/build/move_tool_to_frame': PYTHONPATH=/home/pmlab/yueju/move_tool/build/move_tool_to_frame/prefix_override:/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build --no-deps install_data
+[1.730s] running develop
+[1.731s] /home/pmlab/.local/lib/python3.10/site-packages/setuptools/command/develop.py:42: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.731s] !!
+[1.731s] 
+[1.731s]         ********************************************************************************
+[1.731s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.731s]         Instead, use pypa/build, pypa/installer or other
+[1.731s]         standards-based tools.
+[1.731s] 
+[1.731s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.731s]         ********************************************************************************
+[1.732s] 
+[1.732s] !!
+[1.732s]   easy_install.initialize_options(self)
+[1.770s] /home/pmlab/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.770s] !!
+[1.770s] 
+[1.770s]         ********************************************************************************
+[1.770s]         Please avoid running ``setup.py`` directly.
+[1.770s]         Instead, use pypa/build, pypa/installer or other
+[1.770s]         standards-based tools.
+[1.770s] 
+[1.770s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.771s]         ********************************************************************************
+[1.771s] 
+[1.771s] !!
+[1.771s]   self.initialize_options()
+[2.015s] running egg_info
+[2.048s] writing move_tool_to_frame.egg-info/PKG-INFO
+[2.048s] writing dependency_links to move_tool_to_frame.egg-info/dependency_links.txt
+[2.048s] writing entry points to move_tool_to_frame.egg-info/entry_points.txt
+[2.048s] writing requirements to move_tool_to_frame.egg-info/requires.txt
+[2.049s] writing top-level names to move_tool_to_frame.egg-info/top_level.txt
+[2.089s] reading manifest file 'move_tool_to_frame.egg-info/SOURCES.txt'
+[2.090s] writing manifest file 'move_tool_to_frame.egg-info/SOURCES.txt'
+[2.110s] running build_ext
+[2.110s] Creating /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages/move-tool-to-frame.egg-link (link to .)
+[2.111s] Installing move_tool_to_frame_node script to /home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/move_tool_to_frame
+[2.111s] 
+[2.111s] Installed /home/pmlab/yueju/move_tool/build/move_tool_to_frame
+[2.111s] running install_data
+[2.111s] copying resource/move_tool_to_frame -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/share/ament_index/resource_index/packages
+[2.111s] copying package.xml -> /home/pmlab/yueju/move_tool/install/move_tool_to_frame/share/move_tool_to_frame
+[2.135s] Invoked command in '/home/pmlab/yueju/move_tool/build/move_tool_to_frame' returned '0': PYTHONPATH=/home/pmlab/yueju/move_tool/build/move_tool_to_frame/prefix_override:/home/pmlab/yueju/move_tool/install/move_tool_to_frame/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pmlab/yueju/move_tool/build/move_tool_to_frame/build --no-deps install_data

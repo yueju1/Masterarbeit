@@ -15,6 +15,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__builder.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__struct.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
   "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/calibrate_gripper__traits.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__builder.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__struct.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/detail/gripper_calibration__traits.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
+  "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/gripper_calibration.hpp" "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cpp/calibration_interface/srv/calibrate_gripper.hpp"
   )
 
 

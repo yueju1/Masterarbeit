@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/calibration_interface/srv/__init__.py"
   "../rosidl_generator_py/calibration_interface/srv/_calibrate_gripper.py"
   "../rosidl_generator_py/calibration_interface/srv/_calibrate_gripper_s.c"
+  "../rosidl_generator_py/calibration_interface/srv/_gripper_calibration.py"
+  "../rosidl_generator_py/calibration_interface/srv/_gripper_calibration_s.c"
   "CMakeFiles/calibration_interface__py"
 )
 

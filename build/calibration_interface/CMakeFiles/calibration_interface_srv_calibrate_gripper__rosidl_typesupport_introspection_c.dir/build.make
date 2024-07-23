@@ -81,11 +81,18 @@ rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv_typesupport.c.em
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.cs.em
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: rosidl_adapter/calibration_interface/srv/GripperCalibration.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C# code for ROS interfaces"
 	/usr/bin/python3 /home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs --generator-arguments-file /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs__arguments.json --typesupport-impls "rosidl_typesupport_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c" --cs-build-tool DotNetCore
 
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs
+
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
 
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c
@@ -95,6 +102,15 @@ rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesu
 
 rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c
 
 CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c.o: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c.o: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c
@@ -124,16 +140,32 @@ CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_intro
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c -o CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.s
 
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o: rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o -MF CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o.d -o CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o -c /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
+
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c > CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.i
+
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c -o CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.s
+
 # Object files for target calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c
 calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c.o" \
-"CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o"
+"CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o" \
+"CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o"
 
 # External object files for target calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c
 calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c.o
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c.o
+rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c.o
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/build.make
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: libcalibration_interface__rosidl_typesupport_introspection_c.so
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: libcalibration_interface__rosidl_typesupport_c.so
@@ -143,7 +175,7 @@ rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calib
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so: CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library rosidl_generator_cs/calibration_interface/srv/libcalibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c_native.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +191,11 @@ CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_intro
 CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c
 CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c
 CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c
+CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend: rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pmlab/yueju/move_tool/src/calibration_interface /home/pmlab/yueju/move_tool/src/calibration_interface /home/pmlab/yueju/move_tool/build/calibration_interface /home/pmlab/yueju/move_tool/build/calibration_interface /home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/calibration_interface_srv_calibrate_gripper__rosidl_typesupport_introspection_c.dir/depend
 

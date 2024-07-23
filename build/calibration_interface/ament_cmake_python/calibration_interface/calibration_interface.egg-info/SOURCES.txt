@@ -6,3 +6,4 @@ calibration_interface.egg-info/dependency_links.txt
 calibration_interface.egg-info/top_level.txt
 calibration_interface/srv/__init__.py
 calibration_interface/srv/_calibrate_gripper.py
+calibration_interface/srv/_gripper_calibration.py

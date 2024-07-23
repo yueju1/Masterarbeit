@@ -66,16 +66,70 @@ include CMakeFiles/calibration_interface_assembly.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/calibration_interface_assembly.dir/progress.make
 
-CMakeFiles/calibration_interface_assembly:
+CMakeFiles/calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+CMakeFiles/calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "/usr/bin/cmake;-version;/usr/bin/dotnet restore calibration_interface_assembly_dotnetcore.csproj;          /usr/bin/dotnet build calibration_interface_assembly_dotnetcore.csproj -> /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly"
-	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/cmake -DCSHARP_TARGET_FRAMEWORK="netstandard2.0" -DCSHARP_BUILDER_OUTPUT_TYPE="library" -DCSHARP_BUILDER_OUTPUT_PATH="/home/pmlab/yueju/move_tool/build/calibration_interface/" -DCSHARP_PLATFORM="x64" -DCSHARP_BUILDER_OUTPUT_NAME="calibration_interface_assembly" -DCSHARP_CONFIGURE="Release" -DCSHARP_BUILDER_ADDITIONAL_REFERENCES="<Reference Include=\"/home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/dotnet/ros2cs_common.dll\" />" -DCSHARP_BUILDER_SOURCES="<Compile Include=\"/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs\" />" -DCSHARP_TARGET_FRAMEWORK_VERSION="2.0" -DCSHARP_PACKAGE_REFERENCES="" -DMSBUILD_TOOLSET="12.0" -DCSHARP_IMPORTS="" -DCONFIG_INPUT_FILE="/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/Modules/dotnet/dotnetcore.csproj.in" -DCONFIG_OUTPUT_FILE="/home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/calibration_interface_assembly_dotnetcore.csproj" -P /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/ConfigureFile.cmake
+	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/cmake -DCSHARP_TARGET_FRAMEWORK="netstandard2.0" -DCSHARP_BUILDER_OUTPUT_TYPE="library" -DCSHARP_BUILDER_OUTPUT_PATH="/home/pmlab/yueju/move_tool/build/calibration_interface/" -DCSHARP_PLATFORM="x64" -DCSHARP_BUILDER_OUTPUT_NAME="calibration_interface_assembly" -DCSHARP_CONFIGURE="Release" -DCSHARP_BUILDER_ADDITIONAL_REFERENCES="<Reference Include=\"/home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/dotnet/ros2cs_common.dll\" />" -DCSHARP_BUILDER_SOURCES="<Compile Include=\"/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs\" /> <Compile Include=\"/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs\" />" -DCSHARP_TARGET_FRAMEWORK_VERSION="2.0" -DCSHARP_PACKAGE_REFERENCES="" -DMSBUILD_TOOLSET="12.0" -DCSHARP_IMPORTS="" -DCONFIG_INPUT_FILE="/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/Modules/dotnet/dotnetcore.csproj.in" -DCONFIG_OUTPUT_FILE="/home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/calibration_interface_assembly_dotnetcore.csproj" -P /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/ConfigureFile.cmake
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/cmake -DCSHARP_PACKAGE_REFERENCES="" -DCONFIG_INPUT_FILE="/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/Modules/dotnet/packages.config.in" -DCONFIG_OUTPUT_FILE="/home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/packages.config" -P /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/ConfigureFile.cmake
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/cmake -DCSHARP_BUILDER_OUTPUT_NAME="calibration_interface_assembly" -DCONFIG_INPUT_FILE="/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/Modules/dotnet/Directory.Build.props.in" -DCONFIG_OUTPUT_FILE="/home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly/Directory.Build.props" -P /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/dotnet_cmake_module/cmake/ConfigureFile.cmake
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/cmake -version
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/dotnet restore calibration_interface_assembly_dotnetcore.csproj
 	cd /home/pmlab/yueju/move_tool/build/calibration_interface/calibration_interface_assembly && /usr/bin/dotnet build calibration_interface_assembly_dotnetcore.csproj -c=Release
 
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/local/lib/python3.10/dist-packages/rosidl_generator_cs/__init__.py
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl_typesupport.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/idl.cs.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg_typesupport.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/msg.cs.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv_typesupport.c.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: /home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.cs.em
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs: rosidl_adapter/calibration_interface/srv/GripperCalibration.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pmlab/yueju/move_tool/build/calibration_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C# code for ROS interfaces"
+	/usr/bin/python3 /home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs --generator-arguments-file /home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs__arguments.json --typesupport-impls "rosidl_typesupport_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c" --cs-build-tool DotNetCore
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs
+
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
+
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c
+
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c
+
+rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c
+
+rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c
+
 calibration_interface_assembly: CMakeFiles/calibration_interface_assembly
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_fastrtps_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.ep.rosidl_typesupport_introspection_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/calibrate_gripper_s.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_fastrtps_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration.ep.rosidl_typesupport_introspection_c.c
+calibration_interface_assembly: rosidl_generator_cs/calibration_interface/srv/gripper_calibration_s.c
 calibration_interface_assembly: CMakeFiles/calibration_interface_assembly.dir/build.make
 .PHONY : calibration_interface_assembly
 

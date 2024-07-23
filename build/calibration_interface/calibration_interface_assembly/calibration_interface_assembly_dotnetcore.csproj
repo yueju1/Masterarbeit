@@ -13,7 +13,7 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs" />
+    <Compile Include="/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/calibrate_gripper.cs" /> <Compile Include="/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface/srv/gripper_calibration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="/home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/dotnet/ros2cs_common.dll" />

@@ -3,7 +3,8 @@
   "output_dir": "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_generator_cs/calibration_interface",
   "template_dir": "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource",
   "idl_tuples": [
-    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface:srv/CalibrateGripper.idl"
+    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface:srv/CalibrateGripper.idl",
+    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface:srv/GripperCalibration.idl"
   ],
   "target_dependencies": [
     "/home/pmlab/ros2-for-unity/ros2-for-unity/install/lib/rosidl_generator_cs/rosidl_generator_cs",
@@ -17,6 +18,7 @@
     "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.c.em",
     "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv_typesupport.c.em",
     "/home/pmlab/ros2-for-unity/ros2-for-unity/install/share/rosidl_generator_cs/resource/srv.cs.em",
-    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl"
+    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/CalibrateGripper.idl",
+    "/home/pmlab/yueju/move_tool/build/calibration_interface/rosidl_adapter/calibration_interface/srv/GripperCalibration.idl"
   ]
 }

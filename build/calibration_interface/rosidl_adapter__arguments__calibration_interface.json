@@ -1,6 +1,7 @@
 {
   "package_name": "calibration_interface",
   "non_idl_tuples": [
-    "/home/pmlab/yueju/move_tool/src/calibration_interface:srv/CalibrateGripper.srv"
+    "/home/pmlab/yueju/move_tool/src/calibration_interface:srv/CalibrateGripper.srv",
+    "/home/pmlab/yueju/move_tool/src/calibration_interface:srv/GripperCalibration.srv"
   ]
 }
